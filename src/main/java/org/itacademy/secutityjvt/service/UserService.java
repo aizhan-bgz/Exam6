@@ -12,7 +12,16 @@ public interface UserService {
 
     void addRoleToUser(String username, String roleName);
 
+
     User getUser(String username);
 
     List<User> getUsers();
+
+    void blockedUser(String username);
+    void unlockedUser(String username);
+
+    void deleteUser(String username);
+
+
+
 }

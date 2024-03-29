@@ -97,6 +97,16 @@ public class UserController {
             throw new RuntimeException("Токен не удалось обновить");
         }
     }
+
+    @PutMapping("/user/{action}")
+    public ResponseEntity<?> changeStatus(@RequestParam String username, @PathVariable String action) {
+
+        if (action.equals("delete")) userService.deleteUser(username);
+        if (action.equals("block")) userService.blockedUser(username);
+        if (action.equals("unlock")) userService.unlockedUser(username);
+        return ResponseEntity.ok().build();
+    }
+
 }
 
 

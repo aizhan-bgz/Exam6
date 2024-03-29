@@ -17,28 +17,23 @@ public class SecutityJvtApplication {
         SpringApplication.run(SecutityJvtApplication.class, args);
     }
 
-   /* @Bean
+    @Bean
     CommandLineRunner run(UserService userService) {
         return arg -> {
             userService.saveRole(new Role(null, "ROLE_USER"));
-            userService.saveRole(new Role(null, "ROLE_MANAGER"));
-            userService.saveRole(new Role(null, "ROLE_ADMIN"));
             userService.saveRole(new Role(null, "ROLE_SUPER_ADMIN"));
 
-            userService.saveUser(new User(null, "Арген", "argen", "1234", new ArrayList<>()));
-            userService.saveUser(new User(null, "Бекзат", "bekzat", "5678", new ArrayList<>()));
-            userService.saveUser(new User(null, "Ахмед", "ahmed", "234", new ArrayList<>()));
-            userService.saveUser(new User(null, "Аскар", "askar", "567", new ArrayList<>()));
 
-            userService.addRoleToUser("argen", "ROLE_USER");
-            userService.addRoleToUser("bekzat", "ROLE_USER");
-            userService.addRoleToUser("ahmed", "ROLE_MANAGER");
-            userService.addRoleToUser("askar", "ROLE_ADMIN");
-            userService.addRoleToUser("argen", "ROLE_SUPER_ADMIN");
-            userService.addRoleToUser("bekzat", "ROLE_ADMIN");
-            userService.addRoleToUser("askar", "ROLE_USER");
+            userService.saveUser(new User(null, "Айжан", "admin", "1111", "ACTIVE",new ArrayList<>()));
+            userService.saveUser(new User(null, "Ширин", "user1", "2222", "ACTIVE",new ArrayList<>()));
+            userService.saveUser(new User(null, "Мээрим", "user2", "3333", "ACTIVE",new ArrayList<>()));
+
+            userService.addRoleToUser("admin", "ROLE_SUPER_ADMIN");
+            userService.addRoleToUser("user1", "ROLE_USER");
+            userService.addRoleToUser("user2", "ROLE_USER");
+
         };
-    }*/
+    }
 
 
 }
